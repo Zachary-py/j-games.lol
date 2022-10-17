@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>J Games.lol</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search Game..." title="Type a game name...">
+  <ul id="myMenu">
+    <li><a href="motorace.html">Moto Racer</a></li>
+    <li><a href="krunk.html">Krunker.io</a>
+    <li><a href="magictile.html">Magic Tiles</a></li>
+    <li><a href="1v1.html">1v1.lol</a></li>
+    <li><a href="jchat.html">J Chat</a></li>
+  </ul>
+
+  <script>
+    function myFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  <script>
+    window.alert("We Dont Use Cookies");
+  </script>
+
+  <script>
+    
+    
+    
+  </script>
+
+</body>
+
+</html>
